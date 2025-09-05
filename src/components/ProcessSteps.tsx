@@ -24,33 +24,55 @@ const ProcessSteps = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-20 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Comment ça marche ?</h2>
-          <p className="text-xl text-muted-foreground">
+          <h2 className="text-4xl font-bold mb-4 text-black">Comment ça marche ?</h2>
+          <p className="text-xl text-gray-600">
             Trois étapes simples pour vivre l'expérience Boxu
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card key={index} className="p-8 text-center hover:shadow-elegant transition-all duration-300 border-0 bg-white">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-black rounded-full mx-auto flex items-center justify-center mb-4">
-                    <Icon className="w-10 h-10 text-white" />
+              <div key={index} className="text-center">
+                {/* Icon container with modern design */}
+                <div className="mb-8 flex justify-center">
+                  <div className="relative">
+                    {/* Main icon container */}
+                    <div className="w-24 h-24 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center mb-4">
+                      <Icon className="w-10 h-10 text-black" />
+                    </div>
+                    {/* Step number badge */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      {index + 1}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <h4 className="text-lg font-semibold text-black mb-4">{step.subtitle}</h4>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </Card>
+
+                {/* Content */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-black">{step.subtitle}</h3>
+                  <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Connector line (except for last item) */}
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gray-200 transform translate-x-8 -translate-y-1/2" 
+                       style={{ width: 'calc(100% - 6rem)' }} />
+                )}
+              </div>
             );
           })}
+        </div>
+
+        {/* Bottom decorative element */}
+        <div className="mt-16 flex justify-center">
+          <div className="w-16 h-1 bg-black rounded-full"></div>
         </div>
       </div>
     </section>
