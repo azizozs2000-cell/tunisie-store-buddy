@@ -4,7 +4,7 @@ import { Package } from "lucide-react";
 
 const MysteryBoxShowcase = () => {
   return (
-  <section className="py-20 bg-gray-50 flex justify-center items-center px-4">
+  <section className="py-20 bg-gray-100 flex justify-center items-center px-4">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
