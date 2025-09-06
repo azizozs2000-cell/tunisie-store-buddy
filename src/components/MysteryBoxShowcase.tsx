@@ -4,14 +4,12 @@ import { Package } from "lucide-react";
 
 const MysteryBoxShowcase = () => {
   return (
-    <section className="py-20 bg-gray-50">
+  <section className="py-20 bg-gray-50 flex justify-center items-center px-4">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-black">Comment ça marche ?</h2>
-          <p className="text-xl text-gray-600">
-            Trois étapes simples pour vivre l'expérience Boxu
-          </p>
+          
+
         </div>
 
         {/* Mystery Box Showcase */}
@@ -45,15 +43,67 @@ const MysteryBoxShowcase = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="text-4xl font-bold text-black">99,000 TND</div>
-              <Button 
-                size="lg" 
-                className="bg-black hover:bg-gray-800 text-white px-12 py-6 text-lg font-semibold rounded-lg w-full max-w-sm"
-                onClick={() => document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                ACHETER
-              </Button>
+            {/* Formulaire d'achat */}
+            <div className="space-y-6 bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="text-2xl font-semibold mb-4">Formulaire d'achat</h4>
+              <p className="text-gray-600 mb-6">Remplissez le formulaire ci-dessous pour commander votre Mystery Box</p>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Nom complet *
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Votre nom complet"
+                    className="w-full p-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Téléphone *
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Votre numéro de téléphone"
+                    className="w-full p-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Gouvernorat *
+                  </label>
+                  <select className="w-full p-2 border border-gray-300 rounded-md">
+                    <option value="">Sélectionnez un gouvernorat</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Adresse complète *
+                  </label>
+                  <textarea
+                    placeholder="Votre adresse complète"
+                    className="w-full p-2 border border-gray-300 rounded-md"
+                    rows={3}
+                  />
+                </div>
+
+                <div className="border-t border-gray-200 pt-4 mt-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-medium">Total:</span>
+                    <span className="text-xl font-bold">99,000 TND</span>
+                  </div>
+                  <Button 
+                    size="lg" 
+                    className="bg-black hover:bg-gray-800 text-white px-12 py-6 text-lg font-semibold rounded-lg w-full"
+                  >
+                    ACHETER MAINTENANT
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

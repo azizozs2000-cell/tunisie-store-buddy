@@ -1,3 +1,8 @@
+/* Ajout d'une classe personnalisée flex-col */
+.flex-col {
+  background-color: #e5e7eb var(--tw-gradient-to-position);
+  flex-direction: column;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

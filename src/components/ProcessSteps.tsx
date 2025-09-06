@@ -27,7 +27,7 @@ const ProcessSteps = () => {
     <section className="py-20 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-black">Comment ça marche ?</h2>
+          
           <p className="text-xl text-gray-600">
             Trois étapes simples pour vivre l'expérience Boxu
           </p>
