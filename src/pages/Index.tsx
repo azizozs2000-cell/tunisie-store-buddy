@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import MysteryBoxShowcase from "@/components/MysteryBoxShowcase";
 import ProcessSteps from "@/components/ProcessSteps";
@@ -7,6 +8,7 @@ import OrderForm from "@/components/OrderForm";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <HeroSection />
       <MysteryBoxShowcase />
       <ProcessSteps />
